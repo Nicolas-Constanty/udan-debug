@@ -5,16 +5,13 @@ project "udan_debug"
     cppdialect "C++17"
     staticruntime "off"
 
-    pchheader "debugpch.h"
-    pchsource "src/debugpch.cpp"
-
     files {
         "src/**.cpp",
         "include/udan/debug/**.h"
     }
 
     includedirs { 
-        "include/udan/debug",
-        "../ThirdParties/SpdLog/include" -- string formating python like syntax
+        "include",
+        "../SpdLog/include" -- string formating python like syntax
      }
     
